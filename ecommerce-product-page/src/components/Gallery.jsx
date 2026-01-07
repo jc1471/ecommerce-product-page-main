@@ -11,11 +11,11 @@ export default function Gallery() {
             />
             <div className="gallery-buttons">
                 <img
-                    className="previous-button"
+                    className="arrow previous-button"
                     src={iconPrevious}
                 />
                 <img
-                    className="next-button"
+                    className="arrow next-button"
                     src={iconNext}
                 />
             </div>

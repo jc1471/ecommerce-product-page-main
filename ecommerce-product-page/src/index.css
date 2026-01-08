@@ -4,6 +4,17 @@
   padding: 0;
   height: 100vh;
   width: 100%;
+
+  /* Colours */
+  --Orange: hsl(26, 100%, 55%);
+  --Pale-Orange: hsl(25, 100%, 94%);
+  --Very-Dark-Blue: hsl(220, 13%, 13%);
+  --Dark-Grayish-Blue: hsl(219, 9%, 45%);
+  --Grayish-Blue: hsl(220, 14%, 75%);
+  --Light-Grayish-Blue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  /* (with 75% opacity for lightbox background */
 }
 
 * {
@@ -12,10 +23,16 @@
 
 html {
   font-size: 16px;
+  font-family: "Kumbh Sans";
 }
 
 body {
   margin: 0;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -23,7 +40,10 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-block: 3vh;
+  padding-block: 3vh;
+  background-color: white;
+  position: fixed;
+  width: 100%
 }
 
 .header-left-section {
@@ -42,10 +62,11 @@ body {
 
 .gallery {
   width: 100%;
-  height: 42.5vh;
+  height: 55vh;
   overflow: hidden;
   padding: 0;
   margin: 0;
+  padding-top: 4rem;
 }
 
 
@@ -64,7 +85,7 @@ body {
 }
 
 .gallery-buttons {
-  position: fixed;
+  position: absolute;
   width: 88%;
   height: 12.5px;
   left: 7.5vw;
@@ -81,4 +102,110 @@ body {
     color: black;
     height: 34px;
     width: 34px;
+}
+
+.product-section {
+  margin-top: 1.5rem;
+  margin-inline: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.brand-name {
+  color: var(--Dark-Grayish-Blue);
+  font-size: 0.65rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.product-name {
+  color: var(--Very-Dark-Blue);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  color: var(--Dark-Grayish-Blue);
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.current-price {
+  color: var(--Very-Dark-Blue);
+}
+
+.discount {
+  color: var(--Light-Grayish-Blue);
+  background-color: var(--Very-Dark-Blue);
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  margin-right: 7rem;
+}
+
+.previous-price {
+  color: var(--Dark-Grayish-Blue);
+  font-size: 0.8rem;
+  text-decoration:line-through;
+}
+
+.add-to-cart {
+  display: flex;
+  flex-direction: row;
+}
+
+.quantity-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+
+.minus-icon {
+  height: 0.3rem;
+  width: auto;
+}
+
+.plus-icon {
+  height: 1rem;
+  width: auto;
+}
+
+.cart-quantity {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Blue); 
+}
+
+.add-to-cart-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Orange);
+  padding-block: 1rem;
+  border-radius: 10px;
+  color: var(--Very-Dark-Blue);
+}
+
+.cart-icon {
+  color: var(--Very-Dark-Blue);
+  margin-right: 0.5rem;
+  height: 1rem;
+  width: auto;
+}
+
+.add-to-cart-text {
+  color: var(--Very-Dark-Blue);
+  font-size: 0.85rem;
+  font-weight: 750;
+  margin-left: 0.5rem;
 }

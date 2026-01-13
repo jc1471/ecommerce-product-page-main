@@ -10,13 +10,20 @@ export default function Header() {
                 <img
                     src={menuIcon}
                     className="menu-icon"
-                    // add onClick here
-                />
+                        // add onClick here
+                    />
                 <img
                     src={logo}
                     className="logo"
                     // add onClick here
                 />
+                <nav className="navbar">
+                    <a className="collections-page">Collections</a>
+                    <a className="men-page">Men</a>
+                    <a className="women-page">Women</a>
+                    <a className="about-page">About</a>
+                    <a className="contact-page">Contact</a>
+                </nav>
             </div>
             <div className="header-right-section">
                 <img

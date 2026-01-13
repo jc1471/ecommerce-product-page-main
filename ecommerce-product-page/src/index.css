@@ -47,7 +47,16 @@ h1, h2, p {
 }
 
 .header-left-section {
+  display: flex;
+  align-items: center;
+}
 
+nav {
+  display: none;
+  gap: 5rem;
+  color: var(--Dark-Grayish-Blue);
+  font-size: 1rem;
+  margin-left: 2rem;
 }
 
 .menu-icon {
@@ -67,6 +76,7 @@ h1, h2, p {
   padding: 0;
   margin: 0;
   padding-top: 4rem;
+  display: flex;
 }
 
 
@@ -208,4 +218,14 @@ h1, h2, p {
   font-size: 0.85rem;
   font-weight: 750;
   margin-left: 0.5rem;
+}
+
+@media (min-width: 1440px) {
+  nav {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: none;
+  }
 }

@@ -1,24 +1,19 @@
 import imageProduct1 from "../assets/images/image-product-1.jpg";
+import productImages from "../assets/productImages";
 import iconNext from "../assets/images/icon-next.svg";
 import iconPrevious from "../assets/images/icon-previous.svg";
+import MainImage from "../components/MainImage";
+import GalleryPreview from "./GalleryPreview";
 
 export default function Gallery() {
+ 
+
+    let currentImage = productImages[0];
+
     return (
         <div className="gallery">
-            <img
-                className="gallery-image"
-                src={imageProduct1}    
-            />
-            <div className="gallery-buttons">
-                <img
-                    className="arrow previous-button"
-                    src={iconPrevious}
-                />
-                <img
-                    className="arrow next-button"
-                    src={iconNext}
-                />
-            </div>
+            <MainImage currentImage={currentImage} />
+            <GalleryPreview productImages={productImages}/>
         </div>
     )
 }

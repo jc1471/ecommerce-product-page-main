@@ -4,7 +4,7 @@ import plusIcon from "../assets/images/icon-plus.svg";
 
 export default function AddToCart() {
     return (
-        <div className="AddToCart">
+        <div className="add-to-cart">
             <div className="quantity-section">
                 <img
                     className="minus-icon"

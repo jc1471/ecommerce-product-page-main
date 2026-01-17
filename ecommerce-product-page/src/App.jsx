@@ -11,11 +11,13 @@ function App() {
     <>
       <div className="parent-container">
         <Header />
-        <Gallery />
-        <div className="product-section">
-          <ProductInfo />
-          <PriceSection />
-          <AddToCart />
+        <div className="main-section">
+          <Gallery />
+          <div className="product-section">
+            <ProductInfo />
+            <PriceSection />
+            <AddToCart />
+          </div>
         </div>
       </div>
     </>

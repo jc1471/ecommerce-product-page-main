@@ -5,7 +5,7 @@ import avatar from "../assets/images/image-avatar.png";
 
 export default function Header() {
     return (
-        <div className="header">
+        <header className="header">
             <div className="header-left-section">
                 <img
                     src={menuIcon}
@@ -37,6 +37,6 @@ export default function Header() {
                     // add onClick here
                     />  
             </div>
-        </div>
+        </header>
     )
 }

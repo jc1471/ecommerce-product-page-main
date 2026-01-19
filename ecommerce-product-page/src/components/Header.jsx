@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import menuIcon from "../assets/images/icon-menu.svg";
 import logo from "../assets/images/logo.svg";
 import cartIcon from "../assets/images/icon-cart.svg";
 import avatar from "../assets/images/image-avatar.png";
 
-export default function Header() {
+export default function Header( {cartViewActive, setCartViewActive, cartQuantity, setCartQuantity} ) {
+
+
+    const handleCartView = () => {
+        setCartViewActive((cartViewActive) => 
+        cartViewActive ? false : true
+        );
+    }
+
     return (
         <header className="header">
             <div className="header-left-section">
@@ -26,16 +35,23 @@ export default function Header() {
                 </nav>
             </div>
             <div className="header-right-section">
-                <img
-                    src={cartIcon}
-                    className="cart-icon"
-                    // add onClick here
-                />  
+                <div className="cart-icon-wrapper">
+                    <img
+                        src={cartIcon}
+                        className="cart-icon"
+                        onClick={handleCartView}
+                    />  
+                    {cartQuantity > 0 && (
+                        <p className="cart-icon-amount">
+                        {cartQuantity}
+                    </p>
+                    )}
+                </div>
                 <img
                     src={avatar}
                     className="avatar"
                     // add onClick here
-                    />  
+                />  
             </div>
         </header>
     )

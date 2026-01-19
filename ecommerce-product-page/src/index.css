@@ -303,11 +303,24 @@ nav {
     padding-top: 1rem;
   }
 
+  .preview-image.active {
+    margin: 0;
+    padding: 0;
+    border: 3px var(--Orange) solid;
+    border-radius: 10%;
+  }
+
   .preview-image > img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 10%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .preview-image.active img {
+    opacity: 0.3;
   }
 
 

@@ -1,6 +1,8 @@
-export default function PreviewImage({ key, image, active }) {
+export default function PreviewImage({ image, isActive, onClick }) {
     return (
-        <div className="preview-image">
+        <div className={`preview-image ${isActive ? "active" : ""}`}
+            onClick={onClick}
+        >
             <img
                 src={image}
                 />

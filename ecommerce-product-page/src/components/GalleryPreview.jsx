@@ -1,13 +1,6 @@
 import PreviewImage from "../components/PreviewImage";
-import { useState } from "react";
 
-export default function GalleryPreview({ productImages }) {
-
-    const [active, setActive] = useState(0);
-
-    const handleClick = (i) => {
-        setActive(i);
-    };
+export default function GalleryPreview({ productImages, activeIndex, setActiveIndex }) {
 
     return (
         <div className="gallery-preview">
@@ -15,8 +8,8 @@ export default function GalleryPreview({ productImages }) {
                 <PreviewImage
                     key={i}
                     image={e.thumbnail}
-                    isActive={active === i}
-                    onClick={() => handleClick(i)}
+                    isActive={activeIndex === i}
+                    onClick={() => setActiveIndex(i)}
                     />
             ))}
         </div>

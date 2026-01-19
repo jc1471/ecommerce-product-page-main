@@ -1,3 +1,4 @@
+import { useState } from "react";
 import imageProduct1 from "../assets/images/image-product-1.jpg";
 import productImages from "../assets/productImages";
 import iconNext from "../assets/images/icon-next.svg";
@@ -7,13 +8,20 @@ import GalleryPreview from "./GalleryPreview";
 
 export default function Gallery() {
  
-
-    let currentImage = productImages[0];
+    const [activeIndex, setActiveIndex] = useState(0);
+        
+    /*let currentImage = productImages[0];*/
 
     return (
         <div className="gallery">
-            <MainImage currentImage={currentImage} />
-            <GalleryPreview productImages={productImages}/>
+            <MainImage image={productImages[activeIndex]}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+                productImages={productImages}    
+            />
+            <GalleryPreview productImages={productImages}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex} />
         </div>
     )
 }

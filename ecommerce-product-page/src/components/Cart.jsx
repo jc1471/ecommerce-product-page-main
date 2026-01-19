@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import thumbnail from "../assets/images/image-product-1-thumbnail.jpg";
 import iconDelete from "../assets/images/icon-delete.svg";
+import iconClose from "../assets/images/icon-close.svg";
 
 export default function Cart( { setCartQuantity, cartQuantity, cartViewActive, setCartViewActive } ) {
 
@@ -8,6 +9,10 @@ export default function Cart( { setCartQuantity, cartQuantity, cartViewActive, s
         setCartQuantity((cartQuantity) =>
             cartQuantity === 0 ? 0 : cartQuantity - 1    
         );
+    };
+
+    const handleCloseButton = () => {
+        setCartViewActive(false);
     };
 
     return (
@@ -18,7 +23,14 @@ export default function Cart( { setCartQuantity, cartQuantity, cartViewActive, s
                 ${cartViewActive ? "active" : ""}`
             }
             >
-            <h1>Cart</h1>
+            <div className="cart-header">
+                <h1>Cart</h1>
+                <img
+                    className="cart-close-button"
+                    src={iconClose}
+                    onClick={handleCloseButton}    
+                />
+            </div>
             {cartQuantity === 0 ? 
                 (<p className="cart-empty-text">Your cart is empty</p>
                 ) : (
